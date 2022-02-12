@@ -42,8 +42,10 @@
       </ul>
     </nav>
   </header>
-  <main class="main-inner">
+
+  <main class="main-inner main-container">
     <div class="catolog-background">
+      <div class="page-container">
       <header class="header-inner">
         <h1 class="header-inner-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -59,30 +61,30 @@
         </ul>
       </header>
       <section class="hotel-filter">
-        <h2 class="visually-hidden">Фильтры для выбора гостиницы</h2>
+        <h2 class="visually-hidden" hidden>Фильтры для выбора гостиницы</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Инфраструктура</legend>
-            <ul class="control-list">
-              <li class="control-item">
+          <div class="catalog-filter-group">
+            <legend class="catalog-filter-title">Инфраструктура:</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="pool" checked>Бассейн
                 </label>
               </li>
-              <li class="control-item">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="parking" checked>Парковка
                 </label>
               </li>
-              <li class="control-item">
+              <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="Wi-Fi">Wi-Fi
                 </label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Тип жилья</legend>
+          </div>
+          <div class="catalog-filter-group">
+            <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
@@ -100,35 +102,41 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="catalog-filter-group">
+          </div>
+          <div class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-          </fieldset>
+          </div>
+          <div class="button-container">
           <button class="button-blue button-filter" type="submit">Применить</button>
           <input type="reset" value="Сбросить">
+          </div>
+        </div>
         </form>
       </section>
     </div>
+    <div class="page-container">
     <section class="sorting">
-      <h2 class="visually-hidden">Сортировка гостиниц</h2>
-      <span class="sorting-page">Найдено гостиниц: 38</span>
-      <select class="select-control" aria-label="Сортировка">
-        <option value="cheap">Сначала дешёвые</option>
-        <option value="expensive">Сначала дорогие</option>
-      </select>
-      <a class="button-sorting button-sorting-active" href="#">
-        <span class="visually-hidden">Показать карточки</span>
-        <img class="button-sorting-image" src="images/mode-tile.svg" width="16" height="14" alt="Показать карточки">
-      </a>
-      <a class="button-sorting" href="#">
-        <span class="visually-hidden">Показать карточки с подписью</span>
-        <img class="button-sorting-image" src="images/mode-slideshow.svg" width="16" height="14" alt="Показать карточки с подписью">
-      </a>
-      </a>
-      <a class="button-sorting" href="#">
-        <span class="visually-hidden">Показать списком</span>
-        <img class="button-sorting-image" src="images/mode-list.svg" width="16" height="14" alt="Показать список">
-      </a>
+
+        <h2 class="visually-hidden" hidden>Сортировка гостиниц</h2>
+        <span class="sorting-page">Найдено гостиниц: 38</span>
+        <select class="select-control" aria-label="Сортировка">
+          <option value="cheap">Сначала дешёвые</option>
+          <option value="expensive">Сначала дорогие</option>
+        </select>
+        <a class="button-sorting button-sorting-active" href="#">
+          <span class="visually-hidden" hidden>Показать карточки</span>
+          <img class="button-sorting-image" src="images/mode-tile.svg" width="16" height="14" alt="Показать карточки">
+        </a>
+        <a class="button-sorting" href="#">
+          <span class="visually-hidden" hidden>Показать карточки с подписью</span>
+          <img class="button-sorting-image" src="images/mode-slideshow.svg" width="16" height="14" alt="Показать карточки с подписью">
+        </a>
+        </a>
+        <a class="button-sorting" href="#">
+          <span class="visually-hidden" hidden>Показать списком</span>
+          <img class="button-sorting-image" src="images/mode-list.svg" width="16" height="14" alt="Показать список">
+        </a>
+
       <ul class="hotel-list">
         <li class="hotel-card">
           <a class="hotel-card-link" href="#">
@@ -187,8 +195,11 @@
           <span class="rating-hotel">Рейтинг: 9,2</span>
         </li>
       </ul>
-      <button class="button-blue pagination-show-more" type="button">Загрузить ещё</button>
+      <div class="show-more-container">
+        <button class="button-blue button-show-more" type="button">Загрузить ещё</button>
+      </div>
     </section>
+    <div class="pagination-container">
     <ul class="pagination">
       <li class="pagination-item">
         <a class="pagination-link pagination-current" href="#">1</a>
@@ -214,6 +225,7 @@
       <option value="four">4</option>
       <option value="eight">8</option>
     </select>
+    </div>
 
     <section class="mailing-inner">
       <h2 class="visually-hidden">Подписка на рассылку</h2>
@@ -224,8 +236,10 @@
         <button class="button-blue" type="submit">Подписаться</button>
       </form>
     </section>
+  </div>
   </main>
   <footer class="page-footer">
+    <div class="page-footer-container">
     <section class="social">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social-list">
@@ -259,6 +273,7 @@
         <img src="images/logo-html_acadamy.svg" width="115" height="33" alt="Логотип HTML-академии">
       </a>
     </section>
+    </div>
   </footer>
 </body>
 
