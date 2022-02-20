@@ -514,19 +514,25 @@ color: #000000;
   text-transform: uppercase;
   width: 55px;
   height: 55px;
-
-
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pagination-item {
-  display: flex;
-  text-align: center;
   margin-right: 8px;
-
+}
+.pagination-item:last-child{
+  margin-right: 0;
 }
 .pagination-current {
   color: #000000;
+}
+.number-of-elements-container {
+  align-self: center;
+}
+.number-of-elements {
+  margin-left: 51px;
+  padding: 13px 133px 12px 17px;
 }
 .mailing-inner {
   width: 800px;
