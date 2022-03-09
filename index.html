@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <div class="site-container">
   <header class="page-header">
     <nav class="navigation">
       <a class="navigation-logo" href="#">
@@ -15,7 +16,7 @@
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link" href="#">Главная</a>
+          <a class="navigation-link link-active" href="#">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">О Седоне</a>
@@ -26,19 +27,19 @@
       </ul>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link-icon" href="#">
             <img src="images/search.svg" width="18" height="18" alt="Поиск">
             <span class="visually-hidden">Поиск</span>
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link-icon" href="#">
             <img src="images/favorite.svg" width="18" height="17" alt="избранное">
             <span class="visually-hidden">Мне нравится</span>
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link button-brown" href="#">Хочу сюда</a>
+          <a class="navigation-link button-brown" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -55,27 +56,23 @@
     <section class="about-sedona">
       <!--Заголовок преимуществ Седоны-->
       <div class="about-sedona-container">
-        <div class="about-sedona-paragraph">
-          <h2 class="about-sedona-title">Седона — небольшой городок в Аризоне,<br/>заслуживающий большего!</h2>
-          <p class="about-sedona-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-        </div>
+        <h2 class="about-sedona-title">Седона — небольшой городок в Аризоне,<br/>заслуживающий большего!</h2>
+        <p class="about-sedona-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       </div>
       <!-- Список преимуществ-->
       <h3 class="visually-hidden">Преимущества</h3>
-      <div class="advantages-container">
         <ul class="advantages-list">
           <li class="advantages-item item-with-photo">
-            <div class="advantages-with-photo">
-              <div class="advantages-item-container">
-                <h4 class="advantages-item-title">Настоящий городок</h4>
-                <p>— №1 —</p>
-                <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-              </div>
-              <div>
-                <img class="advantages-img" src="images/photo-1.jpg" width="800" height="384" alt="Архитектура города Седона">
-              </div>
+            <div class="advantages-item-container">
+              <h4 class="advantages-item-title">Настоящий городок</h4>
+              <p class="advantages-item-description">— №1 —</p>
+              <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <div>
+              <img class="advantages-img" src="images/photo-1.jpg" width="800" height="384" alt="Архитектура города Седона">
             </div>
           </li>
+
           <li class="advantages-item housing">
             <div class="advantages-item-container-icon">
               <img src="images/home.svg" width="75" height="72" alt="домик">
@@ -98,16 +95,14 @@
             </div>
           </li>
           <li class="advantages-item item-with-photo">
-            <div class="advantages-with-photo">
               <div>
                 <img class="advantages-img" src="images/photo-2.jpg" width="800" height="384" alt="Мост дьявола">
               </div>
               <div class="advantages-item-container">
                 <h4 class="advantages-item-title">Там есть мост дьявола</h4>
-                <p>— №2 —</p>
-                <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                <p class="advantages-item-description">— №2 —</p>
+                <p class="advantages-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
-            </div>
           </li>
           <li class="advantages-item small-area">
             <div class="advantages-item-container">
@@ -131,7 +126,6 @@
             </div>
           </li>
         </ul>
-      </div>
     </section>
 
     <section class="hotel-search">
@@ -191,8 +185,9 @@
           <img src="images/logo-html_acadamy.svg" width="115" height="33" alt="Логотип HTML-академии">
         </a>
       </section>
-    
+
   </footer>
+</div>
 </body>
 
 </html>
