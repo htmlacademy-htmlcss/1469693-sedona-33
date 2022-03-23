@@ -565,6 +565,7 @@ body {
   display: flex;
 }
 .catalog-filter-group {
+  display: block;
   text-align: left;
 }
 .catalog-filter-group-infrastructure {
@@ -1025,7 +1026,7 @@ body {
   padding: 0;
   margin: 0;
   margin-bottom: 62px;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
