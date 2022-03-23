@@ -565,7 +565,7 @@ body {
   display: flex;
 }
 .catalog-filter-group {
-  display: block;
+  border: none;
   text-align: left;
 }
 .catalog-filter-group-infrastructure {
@@ -585,16 +585,14 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  margin-bottom: 30px;
   padding: 0;
 }
-.catalog-filter-group-price .catalog-filter-title {
-  margin-bottom: 34px;
-}
+
 .catalog-filter-list {
   padding-left: 0;
   list-style-type: none;
   margin: 0;
+  margin-top: 30px;
 }
 .catalog-filter-item:not(:last-child) {
   margin-bottom: 13px;
@@ -642,6 +640,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 28px;
+  margin-top: 34px;
 }
 .catalog-filter-label {
   display: flex;
