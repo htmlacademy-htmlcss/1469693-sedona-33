@@ -430,6 +430,9 @@ body {
 .social {
   min-width: 120px;
 }
+.range-bar {
+  width: 227px;
+}
 .social-list {
   display: flex;
   flex-wrap: wrap;
