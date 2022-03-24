@@ -154,9 +154,10 @@ body {
 
 /* Welcome-logo */
 .background-image {
-  background-color: #ffffff;
-  color: #000000;
-  background: url("../images/background/index-background.jpg") no-repeat;
+  background-color: #000000;
+  color: #ffffff;
+  background-image: url("../images/background/index-background.jpg");
+  background-repeat: no-repeat;
   margin: 0 auto;
   height: 485px;
   width: 1200px;
@@ -225,18 +226,21 @@ body {
   display: flex;
   flex-grow: 1;
   width: 400px;
-  height: 384px;
+  height: auto;
 }
 .advantages-item-container {
   padding: 98px 90px 77px 90px;
   width: 400px;
-  height: 384px;
+  height: auto;
 }
 
 .advantages-item-container-icon {
   padding: 89px 75px 79px 75px;
   width: 400px;
-  height: 384px;
+  height: auto;
+}
+.advantages-img {
+  display: block;
 }
 .souvenirs .advantages-item-container-icon{
   padding: 85px 75px 79px 75px;
@@ -343,17 +347,18 @@ body {
 .mailing {
   background-image: url("../images/background/background-mailing.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
   width: 1200px;
-  height: 411px;
+  height: auto;
   text-align: center;
   color: #ffffff;
   background-color: #000000;
   padding: 94px 200px;
+
 }
 .mailing-container {
   width: 800px;
-  height: 224px;
 }
 
 .mailing b {
@@ -372,7 +377,7 @@ body {
 .mailing-form {
   display: flex;
   align-items: center;
-  height: 60px;
+
 }
 .email-area {
   min-width: 600px;
@@ -401,6 +406,9 @@ body {
   background-color: #ffffff;
   border-color: #ff5757;
 }
+.email-area:disabled {
+  background-color: #333333;
+}
 
 /* Футер */
 .page-footer {
@@ -420,7 +428,7 @@ body {
   padding-bottom: 30px;
 }
 .social {
-  min-width: 107px;
+  min-width: 120px;
 }
 .social-list {
   display: flex;
@@ -457,12 +465,14 @@ body {
 }
 
 .contact-number {
-  margin: 0;
+  margin: 0 20px;
   text-align: center;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
   padding: 0;
   display: block;
 }
@@ -513,7 +523,8 @@ body {
   background-image: url("../images/background/catalog-background.jpg");
   background-repeat: no-repeat;
   width: 1200px;
-  height: 408px;
+  background-size: cover;
+  height: auto;
   color: #ffffff;
   background-color: #000000;
   margin: 0 auto;
@@ -528,7 +539,7 @@ body {
   font-size: 60px;
   line-height: 78px;
   margin: 0;
-  height: 68px;
+
 }
 .breadcrumbs {
   display: flex;
@@ -542,8 +553,9 @@ body {
   font-size: 16px;
   line-height: 21px;
   list-style-type: none;
-  margin-right: 26px;
+  margin-right: 16px;
   position: relative;
+  cursor: pointer;
 }
 .breadcrumbs-item:after {
   position: absolute;
@@ -555,11 +567,26 @@ body {
   width: 5px;
   height: 8px;
   top: 8px;
-  right: -17px;
+  right: -10px;
   opacity: 30%;
 }
 .breadcrumbs-item:last-child::after {
   content: none;
+}
+.breadcrumbs-link {
+  padding: 2px 5px;
+}
+.breadcrumbs-link:hover{
+  opacity: 60%;
+}
+.breadcrumbs-link:focus {
+  outline-width: 3px;
+  outline-color: #83b3d3;
+  outline-style: solid;
+  border-radius: 4px;
+}
+.breadcrumbs-link:active{
+  opacity: 30%;
 }
 .catalog-filter {
   display: flex;
@@ -604,7 +631,6 @@ body {
 }
 .control-mark {
   position: absolute;
-
   left: 0;
   width: 20px;
   height: 20px;
@@ -615,13 +641,16 @@ body {
 .control:hover .control-mark {
   background: rgba(255, 255, 255, 0.6);
 }
-.control:focus .control-mark {
+.control:focus-within .control-mark{
   background: rgba(255, 255, 255, 0.6);
-  border: 3px solid #83b3d3;
+  outline-color: #83b3d3;
+  outline-style: solid;
+  outline-width: 3px;
 }
 .control:active .control-mark {
   background: rgba(255, 255, 255, 0.3);
 }
+
 .control-input[type="checkbox"]:checked + .control-mark {
   background-image: url("../images/mark.svg");
   background-repeat: no-repeat;
@@ -658,6 +687,19 @@ body {
 .catalog-filter-label:last-child {
   padding: 10px 15px 9px 15px;
   border-radius: 0 4px 4px 0;
+}
+.catalog-filter-label:hover {
+  border-color: rgba(139, 151, 157, 1);
+}
+.catalog-filter-label:focus-within {
+  box-shadow:inset 0px 0px 0px 2px #81B3D2;
+  outline-color: #83b3d3;
+  outline-style: solid;
+  outline-width: 3px;
+}
+.catalog-filter-label:active{
+  background: #756257;
+  border-color: #ffffff;
 }
 .range-input {
   width: 50px;
@@ -708,6 +750,7 @@ body {
 .range-toggle:focus {
   border: 3px solid #83b3d3;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  outline: none;
 }
 .toggle-min {
   top: -8px;
@@ -726,7 +769,14 @@ body {
 .page-container {
   width: 1056px;
   margin: 0 auto;
+  padding-bottom: 94px;
 }
+.page-containers {
+  width: 1056px;
+  margin: 0 auto;
+
+}
+
 
 /* Каталог гостиниц*/
 
@@ -741,6 +791,7 @@ body {
 }
 
 .sorting-page {
+  max-width: 340px;
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
@@ -796,7 +847,6 @@ body {
   flex-direction: column;
   list-style-type: none;
   width: 340px;
-  height: 438px;
   padding: 20px;
 }
 .hotel-card-title {
@@ -913,8 +963,8 @@ body {
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
-  width: 55px;
-  height: 55px;
+  min-width: 55px;
+  min-height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -936,7 +986,9 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  height: 48px;
+}
+.number-of-elements-text {
+  margin: 10px;
 }
 .number-of-elements {
   width: 160px;
@@ -1228,7 +1280,6 @@ body {
 }
 .search-button {
   min-width: 575px;
-  height: 60px;
   padding: 15px 0;
   font-size: 20px;
   line-height: 36px;
@@ -1266,6 +1317,7 @@ body {
   min-width: 200px;
   padding: 17px 25px;
   border-radius: 0px 10px 10px 0px;
+
 }
 
 .button-filter {
